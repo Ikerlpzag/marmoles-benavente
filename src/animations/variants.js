@@ -1,7 +1,7 @@
 export const fadeUp = {
   hidden: {
     opacity: 0,
-    y: 50,
+    y: 32,
   },
 
   visible: {
@@ -9,7 +9,8 @@ export const fadeUp = {
     y: 0,
 
     transition: {
-      duration: 0.8,
+      duration: 0.7,
+      ease: [0.25, 0.1, 0.25, 1],
     },
   },
 };
@@ -21,23 +22,37 @@ export const fade = {
 
   visible: {
     opacity: 1,
+
     transition: {
-      duration: 0.8,
+      duration: 0.7,
+      ease: [0.25, 0.1, 0.25, 1],
     },
   },
 };
 
 export const imageReveal = {
   hidden: {
-    scale: 1.1,
     opacity: 0,
+    scale: 1.03,
   },
 
   visible: {
-    scale: 1,
     opacity: 1,
+    scale: 1,
+
     transition: {
-      duration: 1,
+      duration: 0.9,
+      ease: [0.25, 0.1, 0.25, 1],
+    },
+  },
+};
+
+export const staggerContainer = {
+  hidden: {},
+
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
     },
   },
 };

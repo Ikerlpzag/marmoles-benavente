@@ -1,19 +1,117 @@
-import Seo from "../components/ui/Seo";
 import PageHeader from "../components/ui/PageHeader";
+import Section from "../components/ui/Section";
+import SectionHeader from "../components/ui/SectionHeader";
+import Reveal from "../components/ui/Reveal";
+import CTA from "../components/home/CTA";
 
-export default function Enterprise() {
+import workshop from "../assets/images/about.png";
+import detail1 from "../assets/images/services.webp";
+import detail2 from "../assets/images/services.webp";
+
+export default function About() {
   return (
     <>
-      <Seo
-        title="Sobre nosotros | Mármoles Benavente"
-        description="Conoce nuestra historia."
+      <PageHeader
+        eyebrow="MÁRMOLES BENAVENTE"
+        title="Más de tres décadas trabajando la piedra con la misma precisión."
       />
 
-      <PageHeader
-        eyebrow="Sobre nosotros"
-        title="Tradición, experiencia y pasión por la piedra."
-        description="Llevamos décadas trabajando la piedra natural con precisión y compromiso en cada proyecto."
-      />
+      {/* Introducción */}
+
+      <Section spacing="default">
+        <Reveal>
+          <div className="max-w-2xl">
+            <p className="text-lg leading-9 text-[var(--text-light)]">
+              Desde nuestro taller en Berja damos forma a proyectos en mármol,
+              granito, porcelánico y cuarzo para viviendas, negocios y espacios
+              públicos. Cada pieza se fabrica a medida buscando el equilibrio
+              entre diseño, precisión y durabilidad.
+            </p>
+
+            <p className="mt-8 text-lg leading-9 text-[var(--text-light)]">
+              La experiencia adquirida durante décadas nos permite afrontar cada
+              proyecto con el mismo cuidado, independientemente de su tamaño.
+            </p>
+          </div>
+        </Reveal>
+      </Section>
+
+      {/* Imagen */}
+
+      <section className="pb-40">
+        <Reveal>
+          <img
+            src={workshop}
+            alt="Taller de Mármoles Benavente"
+            className="h-[110vh] w-full object-cover"
+          />
+        </Reveal>
+      </section>
+
+      {/* Proceso */}
+
+      <Section border spacing="large">
+        <div className="grid gap-24 lg:grid-cols-2">
+          <Reveal>
+            <SectionHeader
+              eyebrow="NUESTRO PROCESO"
+              title="Cada proyecto comienza con la elección del material adecuado."
+            />
+          </Reveal>
+
+          <Reveal>
+            <div className="space-y-8 text-lg leading-9 text-[var(--text-light)]">
+              <p>
+                Seleccionamos cuidadosamente cada bloque atendiendo a sus vetas,
+                tonalidades y características técnicas para garantizar el mejor
+                resultado posible.
+              </p>
+
+              <p>
+                Combinamos maquinaria especializada con un acabado artesanal,
+                cuidando cada detalle desde el primer corte hasta la instalación
+                final.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </Section>
+
+      {/* Galería */}
+
+      <Section spacing="large">
+        <div className="grid gap-16 lg:grid-cols-2">
+          <Reveal>
+            <figure>
+              <img
+                src={detail1}
+                alt="Proceso de fabricación"
+                className="aspect-[4/5] w-full object-cover"
+              />
+
+              <figcaption className="mt-6 text-xs uppercase tracking-[0.2em] text-[var(--text-light)]">
+                Fabricación completamente a medida.
+              </figcaption>
+            </figure>
+          </Reveal>
+
+          <Reveal>
+            <figure>
+              <img
+                src={detail2}
+                alt="Detalle de piedra natural"
+                className="aspect-[4/5] w-full object-cover"
+              />
+
+              <figcaption className="mt-6 text-xs uppercase tracking-[0.2em] text-[var(--text-light)]">
+                Materiales seleccionados para durar generaciones.
+              </figcaption>
+            </figure>
+          </Reveal>
+        </div>
+      </Section>
+
+      <CTA />
     </>
   );
 }

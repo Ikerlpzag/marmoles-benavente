@@ -13,7 +13,7 @@ export default function Hero() {
         className="absolute inset-0 h-full w-full object-cover"
       />
 
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-black/25" />
 
       <Container className="relative flex min-h-screen items-center">
 
@@ -23,7 +23,7 @@ export default function Hero() {
             Mármoles Benavente
           </p>
 
-          <h1 className="text-6xl leading-tight lg:text-8xl">
+          <h1 className="text-5xl leading-tight md:text-6xl lg:text-7xl xl:text-8xl">
             Piedra natural
             <br />
             para espacios
@@ -31,11 +31,11 @@ export default function Hero() {
             que perduran.
           </h1>
 
-          <p className="mt-10 max-w-xl text-lg text-neutral-200 leading-8">
+          <p className="mt-10 max-w-lg text-lg text-neutral-200 leading-9">
             Especialistas en mármol, granito, porcelánico y cuarzo.
           </p>
 
-          <div className="mt-12">
+          <div className="mt-14">
             <Button
               to="/projects"
               className="text-white"

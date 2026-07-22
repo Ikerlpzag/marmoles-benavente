@@ -1,7 +1,7 @@
-//import marble from "../assets/images/materials/marble.jpg";
-//import granite from "../assets/images/materials/granite.jpg";
+import marble from "../assets/images/materials/marble.avif";
+import granite from "../assets/images/materials/granite.jpg";
 //import porcelain from "../assets/images/materials/porcelain.jpg";
-//import quartz from "../assets/images/materials/quartz.jpg";
+import quartz from "../assets/images/materials/quartz.jpg";
 
 export const materials = [
   {
@@ -10,7 +10,7 @@ export const materials = [
     title: "Elegancia natural que perdura.",
     description:
       "El mármol destaca por la belleza única de sus vetas y su capacidad para aportar personalidad a cualquier espacio. Es una elección atemporal para cocinas, baños, escaleras y revestimientos.",
-    //image: marble,
+    image: marble,
   },
   {
     slug: "granite",
@@ -18,7 +18,7 @@ export const materials = [
     title: "Resistencia para el uso diario.",
     description:
       "Su dureza y durabilidad convierten al granito en una solución ideal para superficies sometidas a un uso intensivo, ofreciendo un excelente comportamiento frente al paso del tiempo.",
-    //image: granite,
+    image: granite,
   },
   {
     slug: "porcelain",
@@ -34,6 +34,6 @@ export const materials = [
     title: "Precisión, uniformidad y funcionalidad.",
     description:
       "El cuarzo ofrece una superficie resistente, fácil de mantener y disponible en una amplia variedad de acabados, ideal para espacios modernos y de uso cotidiano.",
-    //image: quartz,
+    image: quartz,
   },
 ];

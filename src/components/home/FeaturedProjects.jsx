@@ -6,13 +6,13 @@ import Button from "../ui/Button";
 import Reveal from "../ui/Reveal";
 
 import { staggerContainer, fadeUp } from "../../animations/variants";
-import { featuredProjects } from "../../data/projects";
+import { projects } from "../../data/projects";
 
 export default function FeaturedProjects() {
   return (
     <Section border spacing="large">
       <Reveal>
-        <div className="mb-20 flex items-end justify-between">
+        <div className="mb-14 flex flex-col gap-8 md:mb-20 md:flex-row md:items-end md:justify-between">
           <SectionHeader
             eyebrow="PROYECTOS"
             title="Algunos de nuestros trabajos."
@@ -31,9 +31,9 @@ export default function FeaturedProjects() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="grid gap-10 lg:grid-cols-3"
+        className="grid gap-10 md:grid-cols-2 lg:grid-cols-3"
       >
-        {featuredProjects.map((project) => (
+        {projects.map((project) => (
           <motion.article
             key={project.id}
             variants={fadeUp}
@@ -44,7 +44,7 @@ export default function FeaturedProjects() {
               className="aspect-[4/5] w-full object-cover"
             />
 
-            <p className="mt-6 text-xs uppercase tracking-[0.3em] text-[var(--text-light)]">
+            <p className="mt-5 text-xs uppercase tracking-[0.3em] text-[var(--text-light)]">
               {project.category}
             </p>
 
@@ -54,6 +54,12 @@ export default function FeaturedProjects() {
           </motion.article>
         ))}
       </motion.div>
+
+      <div className="mt-10 md:hidden">
+        <Button to="/projects">
+          Ver todos
+        </Button>
+      </div>
     </Section>
   );
 }

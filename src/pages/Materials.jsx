@@ -19,7 +19,7 @@ export default function Materials() {
       <Section spacing="default">
         <Reveal>
           <div className="max-w-2xl">
-            <p className="text-lg leading-9 text-[var(--text-light)]">
+            <p className="text-base leading-8 text-[var(--text-light)] sm:text-lg sm:leading-9">
               Cada material posee unas propiedades únicas. Nuestro trabajo
               consiste en ayudarte a elegir la opción más adecuada teniendo en
               cuenta el diseño, el uso previsto y las características técnicas

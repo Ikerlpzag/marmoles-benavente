@@ -7,10 +7,10 @@ export default function Section({
   className = "",
 }) {
   const spacingMap = {
-    compact: "py-24",
-    default: "py-32",
-    large: "py-40",
-    hero: "py-48",
+    compact: "py-16 md:py-20 lg:py-24",
+    default: "py-20 md:py-24 lg:py-32",
+    large: "py-24 md:py-32 lg:py-40",
+    hero: "py-32 md:py-40 lg:py-48",
   };
 
   return (

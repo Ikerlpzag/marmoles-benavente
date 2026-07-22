@@ -21,14 +21,14 @@ export default function About() {
       <Section spacing="default">
         <Reveal>
           <div className="max-w-2xl">
-            <p className="text-lg leading-9 text-[var(--text-light)]">
+            <p className="text-base leading-8 text-[var(--text-light)] sm:text-lg sm:leading-9">
               Desde nuestro taller en Berja damos forma a proyectos en mármol,
               granito, porcelánico y cuarzo para viviendas, negocios y espacios
               públicos. Cada pieza se fabrica a medida buscando el equilibrio
               entre diseño, precisión y durabilidad.
             </p>
 
-            <p className="mt-8 text-lg leading-9 text-[var(--text-light)]">
+            <p className="mt-8 text-base leading-8 text-[var(--text-light)] sm:text-lg sm:leading-9">
               La experiencia adquirida durante décadas nos permite afrontar cada
               proyecto con el mismo cuidado, independientemente de su tamaño.
             </p>
@@ -38,12 +38,12 @@ export default function About() {
 
       {/* Imagen */}
 
-      <section className="pb-40">
+      <section className="pb-24 md:pb-32 lg:pb-40">
         <Reveal>
           <img
             src={workshop}
             alt="Taller de Mármoles Benavente"
-            className="h-[110vh] w-full object-cover"
+            className="h-[60vh] w-full object-cover md:h-[80vh] lg:h-[110vh]"
           />
         </Reveal>
       </section>
@@ -51,7 +51,7 @@ export default function About() {
       {/* Proceso */}
 
       <Section border spacing="large">
-        <div className="grid gap-24 lg:grid-cols-2">
+        <div className="grid gap-14 md:gap-16 lg:grid-cols-2 lg:gap-24 lg:items-start">
           <Reveal>
             <SectionHeader
               eyebrow="NUESTRO PROCESO"
@@ -59,8 +59,8 @@ export default function About() {
             />
           </Reveal>
 
-          <Reveal>
-            <div className="space-y-8 text-lg leading-9 text-[var(--text-light)]">
+          <Reveal delay={0.1}>
+            <div className="space-y-6 md:space-y-8 text-base leading-8 text-[var(--text-light)] sm:text-lg sm:leading-9">
               <p>
                 Seleccionamos cuidadosamente cada bloque atendiendo a sus vetas,
                 tonalidades y características técnicas para garantizar el mejor
@@ -80,7 +80,7 @@ export default function About() {
       {/* Galería */}
 
       <Section spacing="large">
-        <div className="grid gap-16 lg:grid-cols-2">
+        <div className="grid gap-10 md:gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
             <figure>
               <img
@@ -89,13 +89,13 @@ export default function About() {
                 className="aspect-[4/5] w-full object-cover"
               />
 
-              <figcaption className="mt-6 text-xs uppercase tracking-[0.2em] text-[var(--text-light)]">
+              <figcaption className="mt-5 text-xs uppercase tracking-[0.2em] text-[var(--text-light)]">
                 Fabricación completamente a medida.
               </figcaption>
             </figure>
           </Reveal>
 
-          <Reveal>
+          <Reveal delay={0.1}>
             <figure>
               <img
                 src={detail2}
@@ -103,7 +103,7 @@ export default function About() {
                 className="aspect-[4/5] w-full object-cover"
               />
 
-              <figcaption className="mt-6 text-xs uppercase tracking-[0.2em] text-[var(--text-light)]">
+              <figcaption className="mt-5 text-xs uppercase tracking-[0.2em] text-[var(--text-light)]">
                 Materiales seleccionados para durar generaciones.
               </figcaption>
             </figure>

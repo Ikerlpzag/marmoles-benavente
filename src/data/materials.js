@@ -1,39 +1,85 @@
-import marble from "../assets/images/materials/marble.avif";
-import granite from "../assets/images/materials/granite.jpg";
-//import porcelain from "../assets/images/materials/porcelain.jpg";
-import quartz from "../assets/images/materials/quartz.jpg";
+import macael from "../assets/images/materials/macael.jpg";
+import gris from "../assets/images/materials/gris.jpg";
 
-export const materials = [
-  {
-    slug: "marble",
-    eyebrow: "MÁRMOL",
-    title: "Elegancia natural que perdura.",
-    description:
-      "El mármol destaca por la belleza única de sus vetas y su capacidad para aportar personalidad a cualquier espacio. Es una elección atemporal para cocinas, baños, escaleras y revestimientos.",
-    image: marble,
-  },
-  {
-    slug: "granite",
-    eyebrow: "GRANITO",
-    title: "Resistencia para el uso diario.",
-    description:
-      "Su dureza y durabilidad convierten al granito en una solución ideal para superficies sometidas a un uso intensivo, ofreciendo un excelente comportamiento frente al paso del tiempo.",
-    image: granite,
-  },
-  {
-    slug: "porcelain",
-    eyebrow: "PORCELÁNICO",
-    title: "Diseño contemporáneo y altas prestaciones.",
-    description:
-      "El porcelánico combina una estética sofisticada con una gran resistencia al calor, la humedad y las manchas, siendo perfecto para proyectos de arquitectura e interiorismo.",
-    //image: porcelain,
-  },
-  {
-    slug: "quartz",
-    eyebrow: "CUARZO",
-    title: "Precisión, uniformidad y funcionalidad.",
-    description:
-      "El cuarzo ofrece una superficie resistente, fácil de mantener y disponible en una amplia variedad de acabados, ideal para espacios modernos y de uso cotidiano.",
-    image: quartz,
-  },
-];
+import vizag from "../assets/images/materials/vizag.jpg";
+import claro from "../assets/images/materials/claro.jpg";
+import oscuro from "../assets/images/materials/oscuro.jpg";
+import absoluto from "../assets/images/materials/absoluto.jpg";
+import castilla from "../assets/images/materials/castilla.jpg";
+import sudafrica from "../assets/images/materials/sudafrica.jpg";
+import noche from "../assets/images/materials/noche.jpg";
+import vaneela from "../assets/images/materials/vaneela.jpg";
+import ochavo from "../assets/images/materials/ochavo.jpg";
+import porriño from "../assets/images/materials/porriño.jpg";
+import himalaya from "../assets/images/materials/himalaya.jpg";
+import salone from "../assets/images/materials/salone.jpg";
+import oliva from "../assets/images/materials/oliva.jpg";
+
+export const materials = {
+  marmoles: [
+    {
+      title: "BLANCO MACAEL",
+      image: macael,
+    },
+    {
+      title: "GRIS MACAEL",
+      image: gris,
+    },
+    
+  ],
+
+  granitos: [
+    {
+      title: "AZUL VIZAG",
+      image: vizag,
+    },
+    {
+      title: "LABRADOR CLARO",
+      image: claro,
+    },
+    {
+      title: "LABRADOR OSCURO",
+      image: oscuro,
+    },
+    {
+      title: "NEGRO ABSOLUTO",
+      image: absoluto,
+    },
+    {
+      title: "BLANCO CASTILLA",
+      image: castilla,
+    },
+    {
+      title: "NEGRO SUDÁFRICA",
+      image: sudafrica,
+    },
+    {
+      title: "AZUL NOCHE",
+      image: noche,
+    },
+    {
+      title: "VANEELA",
+      image: vaneela,
+    },
+    {
+      title: "NEGRO OCHAVO",
+      image: ochavo,
+    },
+    {
+      title: "ROSA PORRIÑO",
+      image: porriño,
+    },
+    {
+      title: "CREMA HIMALAYA",
+      image: himalaya,
+    },
+    {
+      title: "SALONE",
+      image: salone,
+    },
+    {
+      title: "VERDE OLIVA",
+      image: oliva,
+    },
+  ],
+};

@@ -1,9 +1,9 @@
 import PageHeader from "../components/ui/PageHeader";
 import Section from "../components/ui/Section";
+import SectionHeader from "../components/ui/SectionHeader";
 import Reveal from "../components/ui/Reveal";
-
-import FeatureSection from "../components/home/FeatureSection";
 import CTA from "../components/home/CTA";
+import MaterialsGrid from "../components/materials/MaterialsGrid";
 
 import { materials } from "../data/materials";
 
@@ -19,7 +19,7 @@ export default function Materials() {
       <Section spacing="default">
         <Reveal>
           <div className="max-w-2xl">
-            <p className="text-base leading-8 text-[var(--text-light)] sm:text-lg sm:leading-9">
+            <p className="text-lg leading-9 text-[var(--text-light)]">
               Cada material posee unas propiedades únicas. Nuestro trabajo
               consiste en ayudarte a elegir la opción más adecuada teniendo en
               cuenta el diseño, el uso previsto y las características técnicas
@@ -29,17 +29,29 @@ export default function Materials() {
         </Reveal>
       </Section>
 
-      {materials.map((material, index) => (
-        <FeatureSection
-          key={material.slug}
-          eyebrow={material.eyebrow}
-          title={material.title}
-          description={material.description}
-          image={material.image}
-          to="/projects"
-          reverse={index % 2 !== 0}
-        />
-      ))}
+      <Section spacing="compact">
+        <Reveal>
+          <SectionHeader
+            title="Mármoles"
+          />
+        </Reveal>
+
+        <div className="mt-16">
+          <MaterialsGrid materials={materials.marmoles} />
+        </div>
+      </Section>
+
+      <Section border spacing="compact">
+        <Reveal>
+          <SectionHeader 
+            title="Granitos"
+          />
+        </Reveal>
+
+        <div className="mt-16">
+          <MaterialsGrid materials={materials.granitos} />
+        </div>
+      </Section>
 
       <CTA />
     </>

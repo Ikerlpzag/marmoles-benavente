@@ -4,9 +4,7 @@ import Section from "../ui/Section";
 import Reveal from "../ui/Reveal";
 
 export default function FeatureSection({
-  eyebrow,
   title,
-  description,
   image,
   to,
   reverse = false,
@@ -31,13 +29,8 @@ export default function FeatureSection({
         <Reveal delay={0.1}>
           <div>
             <SectionHeader
-              eyebrow={eyebrow}
               title={title}
             />
-
-            <p className="mt-8 max-w-xl text-base leading-8 text-neutral-600 sm:text-lg sm:leading-9">
-              {description}
-            </p>
 
             <Button
               to={to}

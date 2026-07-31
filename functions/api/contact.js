@@ -12,77 +12,143 @@ export async function onRequestPost(context) {
     replyTo: email,
     subject: `📩 Nuevo formulario de contacto - ${nombre}`,
     html: `
-    <div style="background:#f5f5f5;padding:40px 20px;font-family:Arial,sans-serif;">
-        <table style="max-width:650px;margin:auto;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #e5e5e5;">
-        
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+        <meta charset="UTF-8">
+        </head>
+
+        <body style="margin:0;padding:40px 0;background:#f3f3f3;font-family:Arial,Helvetica,sans-serif;color:#222;">
+
+        <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-            <td style="background:#1f1f1f;padding:30px;text-align:center;">
-            <h1 style="margin:0;color:#ffffff;font-size:28px;">
-                Mármoles Benavente
-            </h1>
-            <p style="margin-top:8px;color:#d1d1d1;font-size:14px;">
-                Nuevo formulario de contacto
-            </p>
-            </td>
+        <td align="center">
+
+        <table role="presentation" cellpadding="0" cellspacing="0" width="650" style="background:#ffffff;border:1px solid #e5e5e5;">
+
+        <tr>
+        <td style="padding:35px 45px;border-bottom:4px solid #2f2f2f;">
+
+        <h1 style="margin:0;font-size:30px;font-weight:300;letter-spacing:2px;">
+        MÁRMOLES BENAVENTE
+        </h1>
+
+        <p style="margin:10px 0 0;color:#777;font-size:14px;">
+        Notificación automática desde la página web
+        </p>
+
+        </td>
         </tr>
 
         <tr>
-            <td style="padding:35px;">
+        <td style="padding:45px;">
 
-            <h2 style="margin-top:0;color:#222;">
-                Has recibido una nueva consulta
-            </h2>
+        <h2 style="margin:0 0 30px;font-size:24px;font-weight:400;">
+        Nuevo formulario de contacto
+        </h2>
 
-            <table style="width:100%;border-collapse:collapse;margin-top:25px;">
+        <p style="margin:0 0 35px;color:#666;line-height:28px;">
+        Se ha recibido una nueva solicitud a través del formulario de contacto de la página web.
+        A continuación se muestran los datos facilitados por el cliente.
+        </p>
 
-                <tr>
-                <td style="padding:12px 0;font-weight:bold;width:140px;">
-                    👤 Nombre
-                </td>
+        <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
 
-                <td style="padding:12px 0;">
-                    ${nombre}
-                </td>
-                </tr>
+        <tr>
+        <td style="padding:18px 0;border-top:1px solid #ececec;width:180px;color:#666;">
+        Nombre
+        </td>
 
-                <tr>
-                <td style="padding:12px 0;font-weight:bold;">
-                    ✉️ Email
-                </td>
-
-                <td style="padding:12px 0;">
-                    <a href="mailto:${email}" style="color:#0b6efd;text-decoration:none;">
-                    ${email}
-                    </a>
-                </td>
-                </tr>
-
-            </table>
-
-            <div style="margin-top:35px;">
-                <p style="font-weight:bold;margin-bottom:10px;">
-                💬 Mensaje
-                </p>
-
-                <div style="background:#f8f8f8;border-left:4px solid #333;padding:18px;border-radius:6px;line-height:1.7;">
-                ${mensaje.replace(/\n/g, "<br>")}
-                </div>
-            </div>
-
-            </td>
+        <td style="padding:18px 0;border-top:1px solid #ececec;font-weight:600;">
+        ${nombre}
+        </td>
         </tr>
 
         <tr>
-            <td style="background:#fafafa;border-top:1px solid #ececec;padding:20px;text-align:center;color:#777;font-size:13px;">
-            Este correo ha sido enviado automáticamente desde el formulario de contacto de
-            <br>
-            <strong>marmolesbenavente.com</strong>
-            </td>
+        <td style="padding:18px 0;border-top:1px solid #ececec;color:#666;">
+        Correo electrónico
+        </td>
+
+        <td style="padding:18px 0;border-top:1px solid #ececec;">
+        <a href="mailto:${email}" style="color:#222;text-decoration:none;">
+        ${email}
+        </a>
+        </td>
+        </tr>
+
+        <tr>
+        <td style="padding:18px 0;border-top:1px solid #ececec;color:#666;">
+        Fecha
+        </td>
+
+        <td style="padding:18px 0;border-top:1px solid #ececec;">
+        ${new Date().toLocaleString("es-ES")}
+        </td>
         </tr>
 
         </table>
-    </div>
-    `,
+
+        <div style="margin-top:45px;">
+
+        <h3 style="margin-bottom:18px;font-size:18px;font-weight:500;">
+        Mensaje
+        </h3>
+
+        <div style="
+        background:#fafafa;
+        border-left:4px solid #2f2f2f;
+        padding:25px;
+        line-height:30px;
+        font-size:15px;
+        white-space:pre-line;
+        ">
+        ${mensaje}
+        </div>
+
+        </div>
+
+        <div style="margin-top:45px;text-align:center;">
+
+        <a
+        href="mailto:${email}"
+        style="
+        display:inline-block;
+        padding:15px 32px;
+        background:#2f2f2f;
+        color:white;
+        text-decoration:none;
+        font-size:14px;
+        letter-spacing:1px;
+        text-transform:uppercase;
+        ">
+        Responder al cliente
+        </a>
+
+        </div>
+
+        </td>
+        </tr>
+
+        <tr>
+        <td style="padding:30px 45px;background:#fafafa;border-top:1px solid #ececec;">
+
+        <p style="margin:0;font-size:13px;color:#888;line-height:24px;">
+        Este correo ha sido generado automáticamente desde el formulario de contacto de
+        <strong>marmolesbenavente.com</strong>.
+        </p>
+
+        </td>
+        </tr>
+
+        </table>
+
+        </td>
+        </tr>
+        </table>
+
+        </body>
+        </html>
+        `,
     });
 
     return Response.json({

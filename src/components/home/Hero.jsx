@@ -5,25 +5,28 @@ import Button from "../ui/Button";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen">
+    <section className="relative flex min-h-dvh items-center">
 
       <img
         src={hero}
-        alt=""
+        alt="..."
+        loading="eager"
+        fetchPriority="high"
+        decoding="async"
         className="absolute inset-0 h-full w-full object-cover"
       />
 
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-black/10" />
 
-      <Container className="relative flex min-h-screen items-center">
+      <Container className="relative flex min-h-dvh items-center py-32 md:py-40">
 
-        <div className="max-w-3xl text-white">
+        <div className="max-w-3xl text-[#1F1F1F]">
 
-          <p className="mb-6 uppercase tracking-[0.35em]">
+          <p className="mb-5 text-xs font-medium uppercase tracking-[0.3em] sm:text-sm">
             Mármoles Benavente
           </p>
 
-          <h1 className="text-6xl leading-tight lg:text-8xl">
+          <h1 className="text-4xl leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
             Piedra natural
             <br />
             para espacios
@@ -31,14 +34,14 @@ export default function Hero() {
             que perduran.
           </h1>
 
-          <p className="mt-10 max-w-xl text-lg text-neutral-200 leading-8">
+          <p className="mt-8 max-w-lg text-base leading-8 text-[#3F3F3F] sm:text-lg sm:leading-9">
             Especialistas en mármol, granito, porcelánico y cuarzo.
           </p>
 
-          <div className="mt-12">
+          <div className="mt-10 sm:mt-14">
             <Button
               to="/projects"
-              className="text-white"
+              className="text-[#3F3F3F]"
             >
               Ver proyectos
             </Button>

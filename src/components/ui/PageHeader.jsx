@@ -1,6 +1,5 @@
 import Container from "./Container";
-import { motion } from "framer-motion";
-import { fadeUp } from "../../animations/variants";
+import Reveal from "./Reveal";
 
 export default function PageHeader({
   eyebrow,
@@ -8,28 +7,27 @@ export default function PageHeader({
   description,
 }) {
   return (
-    <section className="border-b border-neutral-200 bg-[#F8F6F2] py-32">
+    <section className="border-b border-[var(--border)] bg-[var(--background)] py-28 sm:py-32 lg:py-40 xl:py-48">
       <Container>
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          className="max-w-3xl"
-        >
-          {eyebrow && (
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-[#0F4C6B]">
-              {eyebrow}
-            </p>
-          )}
+        <Reveal>
+          <div className="max-w-4xl">
+            {eyebrow && (
+              <p className="mb-5 text-xs font-medium uppercase tracking-[0.35em] text-[var(--text-light)] sm:mb-6">
+                {eyebrow}
+              </p>
+            )}
 
-          <h1 className="text-5xl lg:text-7xl">
-            {title}
-          </h1>
+            <h1 className="text-4xl leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl">
+              {title}
+            </h1>
 
-          <p className="mt-8 text-lg leading-8 text-neutral-600">
-            {description}
-          </p>
-        </motion.div>
+            {description && (
+              <p className="mt-8 max-w-2xl text-base leading-8 text-[var(--text-light)] sm:mt-10 sm:text-lg sm:leading-9">
+                {description}
+              </p>
+            )}
+          </div>
+        </Reveal>
       </Container>
     </section>
   );

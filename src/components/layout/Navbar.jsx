@@ -1,53 +1,142 @@
-import { NavLink } from "react-router-dom";
-import { navigation } from "../../data/navigation";
+import { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 
 import Container from "../ui/Container";
 import Button from "../ui/Button";
 
-import logo from "../../assets/images/logo.webp";
+import { navigation } from "../../data/navigation";
+
+import HamburgerButton from "./HamburgerButton";
+import MobileMenu from "./MobileMenu";
+
+import logo from "../../assets/images/logo.png";
 
 export default function Navbar() {
+  const location = useLocation();
+
+  const isHome = location.pathname === "/";
+
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
+  const solid = menuOpen || !isHome || scrolled;
+
+  const scrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-white/90 backdrop-blur-sm">
-      <Container>
-
-        <div className="flex h-24 items-center justify-between">
-
-          <NavLink to="/">
-            <img
-              src={logo}
-              alt="Mármoles Benavente"
-              className="h-12 w-auto"
-            />
-          </NavLink>
-
-          <nav className="hidden lg:flex gap-12 text-[15px]">
-
-            {navigation.map((item) => (
-              <NavLink
-                key={item.href}
-                to={item.href}
-                className={({ isActive }) =>
-                  `transition ${
-                    isActive
-                      ? "text-black"
-                      : "text-neutral-500 hover:text-black"
-                  }`
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+          solid
+            ? "border-b border-[var(--border)] bg-white"
+            : "bg-transparent"
+        }`}
+      >
+        <Container>
+          <div className="flex h-20 lg:h-24 items-center justify-between">
+            <NavLink
+              to="/"
+              onClick={() => {
+                if (location.pathname === "/") {
+                  scrollTop();
                 }
-              >
-                {item.title}
-              </NavLink>
-            ))}
 
-          </nav>
+                setMenuOpen(false);
+              }}
+              className="flex items-center gap-3"
+            >
+              <img
+                src={logo}
+                alt="Mármoles Benavente"
+                className="h-12 lg:h-14 w-auto"
+              />
 
-          <Button to="/contact">
-            Presupuesto
-          </Button>
+              {/* Solo escritorio */}
 
-        </div>
+              <div className="flex flex-col leading-none">
+                <span className="text-[8px] sm:text-[9px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.4em] text-[#0A3F7A]">
+                  MÁRMOLES
+                </span>
 
-      </Container>
-    </header>
+                <span className="font-['Cormorant_Garamond'] text-[1.35rem] sm:text-[1.55rem] md:text-[2rem] font-semibold tracking-[0.05em] text-[#0A3F7A]">
+                  BENAVENTE
+                </span>
+              </div>
+            </NavLink>
+
+            {/* Escritorio */}
+
+            <nav className="hidden lg:flex items-center gap-10">
+              {navigation.map((item) => (
+                <NavLink
+                  key={item.href}
+                  to={item.href}
+                  onClick={() => {
+                    if (location.pathname === item.href) {
+                      scrollTop();
+                    }
+                  }}
+                  className={({ isActive }) =>
+                    `text-[15px] tracking-wide transition-colors duration-300 ${
+                      isActive
+                        ? "text-[var(--text)]"
+                        : solid
+                        ? "text-[var(--text-light)] hover:text-[var(--text)]"
+                        : "text-[var(--text)] hover:text-black"
+                    }`
+                  }
+                >
+                  {item.title}
+                </NavLink>
+              ))}
+            </nav>
+
+            <div className="hidden lg:block">
+              <Button to="/contact">
+                Contactar
+              </Button>
+            </div>
+
+            {/* Móvil */}
+
+            <HamburgerButton
+              open={menuOpen}
+              onClick={() => setMenuOpen(!menuOpen)}
+            />
+          </div>
+        </Container>
+      </header>
+
+      <MobileMenu
+        open={menuOpen}
+        onClose={() => setMenuOpen(false)}
+        currentPath={location.pathname}
+      />
+    </>
   );
 }

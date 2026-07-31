@@ -1,41 +1,68 @@
 import Container from "../ui/Container";
+import Button from "../ui/Button";
+import Reveal from "../ui/Reveal";
 
 export default function Footer() {
   return (
-    <footer className="mt-32 border-t border-neutral-200 bg-white">
-      <Container className="py-14">
+    <footer className="border-t border-[var(--border)] bg-[var(--background)]">
+      <Container>
+        <Reveal>
+          <div className="py-20 md:py-24">
+            <div className="grid gap-14 md:gap-16 lg:grid-cols-2">
+              {/* Información */}
 
-        <div className="flex flex-col gap-10 md:flex-row md:justify-between">
+              <div className="max-w-md">
+                <p className="text-xs uppercase tracking-[0.35em] text-[var(--text-light)]">
+                  Mármoles Benavente
+                </p>
 
-          <div>
-            <h2 className="text-2xl font-semibold tracking-[0.25em]">
-              MB
-            </h2>
+                <h2 className="mt-6 text-2xl font-semibold leading-tight text-[var(--text)] sm:text-3xl">
+                  Piedra natural trabajada con precisión.
+                </h2>
 
-            <p className="mt-3 max-w-sm text-neutral-600">
-              Especialistas en piedra natural para proyectos residenciales,
-              comerciales y arte funerario.
-            </p>
+                <p className="mt-6 text-base leading-8 text-[var(--text-light)]">
+                  Encimeras, fachadas, escaleras, chimeneas, baños y proyectos
+                  personalizados en mármol, granito, cuarzo y piedra natural.
+                </p>
+
+                <p className="mt-8 text-sm text-[var(--text-light)]">
+                  Dalías · Almería
+                </p>
+              </div>
+
+              {/* Navegación */}
+
+              <div className="flex flex-col items-start gap-5 lg:items-end">
+                <Button
+                  to="/projects"
+                  className="inline-flex border-b border-transparent pb-1 text-sm uppercase tracking-[0.18em] transition-colors duration-300 hover:border-[var(--text)]"
+                >
+                  Proyectos
+                </Button>
+
+                <Button
+                  to="/materials"
+                  className="inline-flex border-b border-transparent pb-1 text-sm uppercase tracking-[0.18em] transition-colors duration-300 hover:border-[var(--text)]"
+                >
+                  Materiales
+                </Button>
+
+                <Button
+                  to="/contact"
+                  className="inline-flex border-b border-transparent pb-1 text-sm uppercase tracking-[0.18em] transition-colors duration-300 hover:border-[var(--text)]"
+                >
+                  Contactar
+                </Button>
+              </div>
+            </div>
+
+            <div className="mt-16 md:mt-24 flex flex-col gap-3 border-t border-[var(--border)] pt-8 text-sm text-[var(--text-light)] md:flex-row md:items-center md:justify-between">
+              <p>© 2026 Mármoles Benavente</p>
+
+              <p>Todos los derechos reservados.</p>
+            </div>
           </div>
-
-          <div>
-            <h3 className="font-medium">Contacto</h3>
-
-            <p className="mt-3 text-neutral-600">
-              Berja · Almería
-            </p>
-
-            <p className="text-neutral-600">
-              info@marmolesbenavente.es
-            </p>
-          </div>
-
-        </div>
-
-        <div className="mt-10 border-t pt-6 text-sm text-neutral-500">
-          © {new Date().getFullYear()} Mármoles Benavente
-        </div>
-
+        </Reveal>
       </Container>
     </footer>
   );

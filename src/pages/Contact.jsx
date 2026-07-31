@@ -1,7 +1,7 @@
+import { useState } from "react";
 import PageHeader from "../components/ui/PageHeader";
 import Section from "../components/ui/Section";
 import Reveal from "../components/ui/Reveal";
-import { useState } from "react";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -10,10 +10,12 @@ export default function Contact() {
   const enviarFormulario = async (e) => {
     e.preventDefault();
 
+    console.log("Formulario enviado");
+
     setLoading(true);
     setMensajeEstado("");
 
-    const form = e.target;
+    const form = e.currentTarget;
 
     const datos = {
       nombre: form.nombre.value,
@@ -31,12 +33,13 @@ export default function Contact() {
       });
 
       if (!respuesta.ok) {
-        throw new Error();
+        throw new Error("Error al enviar");
       }
 
       setMensajeEstado("Mensaje enviado correctamente.");
       form.reset();
-    } catch {
+    } catch (err) {
+      console.error(err);
       setMensajeEstado("Ha ocurrido un error al enviar el mensaje.");
     } finally {
       setLoading(false);
@@ -53,7 +56,6 @@ export default function Contact() {
 
       <Section spacing="large">
         <div className="grid gap-16 md:gap-20 lg:grid-cols-2 lg:gap-24">
-          {/* Información */}
 
           <Reveal>
             <div>
@@ -95,18 +97,9 @@ export default function Contact() {
             </div>
           </Reveal>
 
-          {/* Formulario */}
-
           <Reveal delay={0.1}>
-              <form
-                onSubmit={enviarFormulario}
-                className="space-y-8"
-              >
-              <input
-                type="hidden"
-                name="form-name"
-                value="contacto"
-              />
+            <form onSubmit={enviarFormulario} className="space-y-8">
+
               <div>
                 <label className="mb-3 block text-sm uppercase tracking-[0.2em]">
                   Nombre
@@ -140,7 +133,7 @@ export default function Contact() {
 
                 <textarea
                   name="mensaje"
-                  rows="5"
+                  rows={5}
                   required
                   className="w-full resize-none border-b border-[var(--border)] bg-transparent py-4 outline-none transition-colors duration-300 focus:border-[var(--text)]"
                 />
@@ -153,6 +146,7 @@ export default function Contact() {
               >
                 {loading ? "Enviando..." : "Enviar mensaje"}
               </button>
+
               {mensajeEstado && (
                 <p className="pt-4 text-sm">
                   {mensajeEstado}
@@ -160,6 +154,7 @@ export default function Contact() {
               )}
             </form>
           </Reveal>
+
         </div>
       </Section>
 

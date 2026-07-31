@@ -9,15 +9,18 @@ export default function Hero() {
 
       <img
         src={hero}
-        alt=""
+        alt="..."
+        loading="eager"
+        fetchPriority="high"
+        decoding="async"
         className="absolute inset-0 h-full w-full object-cover"
       />
 
-      <div className="absolute inset-0 bg-black/25" />
+      <div className="absolute inset-0 bg-black/10" />
 
       <Container className="relative flex min-h-dvh items-center py-32 md:py-40">
 
-        <div className="max-w-3xl text-white">
+        <div className="max-w-3xl text-[#1F1F1F]">
 
           <p className="mb-5 text-xs font-medium uppercase tracking-[0.3em] sm:text-sm">
             Mármoles Benavente
@@ -31,14 +34,14 @@ export default function Hero() {
             que perduran.
           </h1>
 
-          <p className="mt-8 max-w-lg text-base leading-8 text-neutral-200 sm:text-lg sm:leading-9">
+          <p className="mt-8 max-w-lg text-base leading-8 text-[#3F3F3F] sm:text-lg sm:leading-9">
             Especialistas en mármol, granito, porcelánico y cuarzo.
           </p>
 
           <div className="mt-10 sm:mt-14">
             <Button
               to="/projects"
-              className="text-white"
+              className="text-[#3F3F3F]"
             >
               Ver proyectos
             </Button>

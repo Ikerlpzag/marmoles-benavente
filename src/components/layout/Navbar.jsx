@@ -78,18 +78,12 @@ export default function Navbar() {
 
               {/* Solo escritorio */}
 
-              <div className="hidden md:flex flex-col leading-none">
-                <span
-                  className="text-[10px] uppercase tracking-[0.4em]"
-                  style={{ color: "#0A3F7A" }}
-                >
+              <div className="flex flex-col leading-none">
+                <span className="text-[8px] sm:text-[9px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.4em] text-[#0A3F7A]">
                   MÁRMOLES
                 </span>
 
-                <span
-                  className="font-['Cormorant_Garamond'] text-[2rem] font-semibold tracking-[0.05em]"
-                  style={{ color: "#0A3F7A" }}
-                >
+                <span className="font-['Cormorant_Garamond'] text-[1.35rem] sm:text-[1.55rem] md:text-[2rem] font-semibold tracking-[0.05em] text-[#0A3F7A]">
                   BENAVENTE
                 </span>
               </div>

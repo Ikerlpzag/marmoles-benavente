@@ -12,18 +12,17 @@ export default function Materials() {
     <>
       <PageHeader
         eyebrow="MATERIALES"
-        title="Seleccionamos cada material por su belleza, resistencia y durabilidad."
-        description="Trabajamos exclusivamente con materiales de primera calidad para ofrecer soluciones adaptadas a cada proyecto."
+        title="La base de un proyecto comienza con el material adecuado."
       />
 
       <Section spacing="default">
         <Reveal>
           <div className="max-w-2xl">
             <p className="text-lg leading-9 text-[var(--text-light)]">
-              Cada material posee unas propiedades únicas. Nuestro trabajo
-              consiste en ayudarte a elegir la opción más adecuada teniendo en
-              cuenta el diseño, el uso previsto y las características técnicas
-              de cada proyecto.
+              Trabajamos exclusivamente con materiales de primera calidad,
+              seleccionados por su belleza, resistencia y durabilidad.
+              Te ayudamos a elegir la opción más adecuada según el diseño, 
+              el uso previsto y las necesidades específicas de cada espacio.
             </p>
           </div>
         </Reveal>

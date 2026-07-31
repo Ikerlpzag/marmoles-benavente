@@ -33,7 +33,7 @@ export default function Essence() {
             <img
               src={workshop}
               alt="Taller de Mármoles Benavente"
-              className="w-full object-cover"
+              className=" w-full object-cover"
             />
           </div>
         </Reveal>

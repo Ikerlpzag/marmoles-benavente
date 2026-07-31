@@ -10,16 +10,14 @@ export default function Projects() {
     <>
       <PageHeader
         eyebrow="PROYECTOS"
-        title="Una selección de trabajos realizados en piedra natural."
-        description="Cada proyecto responde a unas necesidades distintas, pero todos comparten el mismo compromiso con la calidad y el detalle."
+        title="Proyectos que reflejan nuestro trabajo."
       />
 
       <Section spacing="default">
         <Reveal>
           <div className="max-w-2xl">
             <p className="text-base leading-8 text-[var(--text-light)] sm:text-lg sm:leading-9">
-              Cocinas, baños, fachadas, escaleras, espacios comerciales y arte
-              funerario. Una muestra de algunos de los proyectos desarrollados
+              Una muestra de algunos de los proyectos desarrollados
               por nuestro equipo.
             </p>
           </div>

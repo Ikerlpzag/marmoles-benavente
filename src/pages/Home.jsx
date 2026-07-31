@@ -17,7 +17,7 @@ export default function Home() {
       <FeatureSection
         eyebrow="Materiales"
         title="La mejor materia prima para cada proyecto."
-        description="Seleccionamos cuidadosamente mármol, granito, cuarzo y porcelánico para garantizar un resultado duradero y elegante."
+        description="Seleccionamos cuidadosamente nuestros mármoles y granitos para garantizar un resultado duradero y elegante."
         image={materialsImage}
         to="/materials"
       />

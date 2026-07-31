@@ -22,8 +22,8 @@ export default function About() {
         <Reveal>
           <div className="max-w-2xl">
             <p className="text-base leading-8 text-[var(--text-light)] sm:text-lg sm:leading-9">
-              Desde nuestro taller en Berja damos forma a proyectos en mármol,
-              granito, porcelánico y cuarzo para viviendas, negocios y espacios
+              Desde nuestro taller damos forma a proyectos en mármol y
+              granito para viviendas, negocios y espacios
               públicos. Cada pieza se fabrica a medida buscando el equilibrio
               entre diseño, precisión y durabilidad.
             </p>

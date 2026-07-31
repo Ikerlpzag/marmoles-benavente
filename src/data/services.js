@@ -10,7 +10,7 @@ export const services = [
     eyebrow: "ENCIMERAS",
     title: "Cocinas diseñadas para durar.",
     description:
-      "Fabricamos encimeras completamente a medida en mármol, granito, porcelánico y cuarzo, adaptándonos al diseño y necesidades de cada proyecto.",
+      "Fabricamos encimeras completamente a medida adaptándonos al diseño y necesidades de cada proyecto.",
     image: kitchens,
   },
   {

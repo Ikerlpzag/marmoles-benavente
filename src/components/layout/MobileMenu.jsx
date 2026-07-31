@@ -71,7 +71,7 @@ export default function MobileMenu({
                   onClick={() => handleClick(item.href)}
                     className={({ isActive }) =>
                     `font-['Cormorant_Garamond']
-                    text-5xl
+                    text-4xl sm:text-5xl
                     tracking-normal
                     transition-colors
                     duration-300

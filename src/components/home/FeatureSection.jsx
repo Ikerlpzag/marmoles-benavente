@@ -5,6 +5,7 @@ import Reveal from "../ui/Reveal";
 
 export default function FeatureSection({
   title,
+  description,
   image,
   to,
   reverse = false,
@@ -32,9 +33,15 @@ export default function FeatureSection({
               title={title}
             />
 
+            {description && (
+              <p className="mt-8 max-w-lg text-base leading-8 text-[var(--text-light)] sm:text-lg sm:leading-9">
+                {description}
+              </p>
+            )}
+
             <Button
               to={to}
-              className="mt-10 inline-flex items-center border-b border-current pb-2 text-sm uppercase tracking-[0.2em] sm:mt-12"
+              className="mt-8 inline-flex items-center border-b border-current pb-2 text-sm uppercase tracking-[0.2em]"
             >
               Descubrir
             </Button>

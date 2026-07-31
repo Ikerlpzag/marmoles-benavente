@@ -11,18 +11,16 @@ export default function Services() {
     <>
       <PageHeader
         eyebrow="SERVICIOS"
-        title="Soluciones en piedra natural para todo tipo de proyectos."
-        description="Fabricamos cada pieza a medida, adaptándonos a las necesidades de cada cliente y de cada espacio."
+        title="Servicios a medida para cada proyecto."
       />
 
       <Section spacing="default">
         <Reveal>
           <div className="max-w-2xl">
             <p className="text-base leading-8 text-[var(--text-light)] sm:text-lg sm:leading-9">
-              Trabajamos con materiales de primera calidad para desarrollar
-              proyectos que combinan precisión, funcionalidad y una estética
-              atemporal. Desde una encimera hasta una fachada completa, cada
-              trabajo recibe la misma atención al detalle.
+              Fabricamos e instalamos piezas a medida para viviendas, 
+              negocios y espacios públicos, cuidando cada detalle desde 
+              la selección del material hasta el acabado final.
             </p>
           </div>
         </Reveal>

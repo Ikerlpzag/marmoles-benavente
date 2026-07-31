@@ -42,6 +42,8 @@ export default function FeaturedProjects() {
               src={project.image}
               alt={project.title}
               className="aspect-[4/5] w-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
 
             <p className="mt-5 text-xs uppercase tracking-[0.3em] text-[var(--text-light)]">

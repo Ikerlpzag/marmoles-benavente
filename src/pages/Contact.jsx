@@ -58,7 +58,17 @@ export default function Contact() {
           {/* Formulario */}
 
           <Reveal delay={0.1}>
-            <form className="space-y-8">
+            <form
+              method="POST"
+              name="contacto"
+              data-static-form
+              className="space-y-8"
+            >
+              <input
+                type="hidden"
+                name="form-name"
+                value="contacto"
+              />
               <div>
                 <label className="mb-3 block text-sm uppercase tracking-[0.2em]">
                   Nombre
@@ -66,6 +76,8 @@ export default function Contact() {
 
                 <input
                   type="text"
+                  name="nombre"
+                  required
                   className="w-full border-b border-[var(--border)] bg-transparent py-4 outline-none transition-colors duration-300 focus:border-[var(--text)]"
                 />
               </div>
@@ -77,6 +89,8 @@ export default function Contact() {
 
                 <input
                   type="email"
+                  name="email"
+                  required
                   className="w-full border-b border-[var(--border)] bg-transparent py-4 outline-none transition-colors duration-300 focus:border-[var(--text)]"
                 />
               </div>
@@ -87,7 +101,9 @@ export default function Contact() {
                 </label>
 
                 <textarea
+                  name="mensaje"
                   rows="5"
+                  required
                   className="w-full resize-none border-b border-[var(--border)] bg-transparent py-4 outline-none transition-colors duration-300 focus:border-[var(--text)]"
                 />
               </div>

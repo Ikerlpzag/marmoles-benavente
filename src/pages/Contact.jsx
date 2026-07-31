@@ -1,8 +1,48 @@
 import PageHeader from "../components/ui/PageHeader";
 import Section from "../components/ui/Section";
 import Reveal from "../components/ui/Reveal";
+import { useState } from "react";
 
 export default function Contact() {
+  const [loading, setLoading] = useState(false);
+  const [mensajeEstado, setMensajeEstado] = useState("");
+
+  const enviarFormulario = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+    setMensajeEstado("");
+
+    const form = e.target;
+
+    const datos = {
+      nombre: form.nombre.value,
+      email: form.email.value,
+      mensaje: form.mensaje.value,
+    };
+
+    try {
+      const respuesta = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(datos),
+      });
+
+      if (!respuesta.ok) {
+        throw new Error();
+      }
+
+      setMensajeEstado("Mensaje enviado correctamente.");
+      form.reset();
+    } catch {
+      setMensajeEstado("Ha ocurrido un error al enviar el mensaje.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <>
       <PageHeader
@@ -58,12 +98,10 @@ export default function Contact() {
           {/* Formulario */}
 
           <Reveal delay={0.1}>
-            <form
-              method="POST"
-              name="contacto"
-              data-static-form
-              className="space-y-8"
-            >
+              <form
+                onSubmit={enviarFormulario}
+                className="space-y-8"
+              >
               <input
                 type="hidden"
                 name="form-name"
@@ -110,10 +148,16 @@ export default function Contact() {
 
               <button
                 type="submit"
+                disabled={loading}
                 className="border-b border-current pb-2 text-sm uppercase tracking-[0.2em]"
               >
-                Enviar mensaje
+                {loading ? "Enviando..." : "Enviar mensaje"}
               </button>
+              {mensajeEstado && (
+                <p className="pt-4 text-sm">
+                  {mensajeEstado}
+                </p>
+              )}
             </form>
           </Reveal>
         </div>

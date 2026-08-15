@@ -5,7 +5,7 @@ import FeaturedProjects from "../components/home/FeaturedProjects";
 import CTA from "../components/home/CTA";
 
 import materialsImage from "../assets/images/materials.webp";
-import servicesImage from "../assets/images/services.webp";
+import servicesImage from "../assets/images/work.webp";
 
 export default function Home() {
   return (

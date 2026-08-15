@@ -1,15 +1,15 @@
 import kitchen from "../assets/images/kitchen.webp";
 import bathroom from "../assets/images/services/bathroom.webp";
-import stairs from "../assets/images/projects.webp";
-import facade from "../assets/images/projects.webp";
-import memorial from "../assets/images/projects.webp";
-import fireplace from "../assets/images/projects.webp";
+import stairs from "../assets/images/services/stairs.webp";
+import table from "../assets/images/table.webp";
+import memorial from "../assets/images/services/memorials.webp";
+import fireplace from "../assets/images/fireplace.webp";
 
 export const projects = [
   {
     id: 1,
     title: "Encimera de cocina",
-    category: "Porcelánico",
+    category: "Granito",
     image: kitchen,
   },
   {
@@ -26,9 +26,9 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Fachada ventilada",
-    category: "Piedra natural",
-    image: facade,
+    title: "Mesa de comedor",
+    category: "Persona",
+    image: table,
   },
   {
     id: 5,

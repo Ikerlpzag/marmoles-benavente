@@ -35,7 +35,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-8 max-w-lg text-base leading-8 text-[#3F3F3F] sm:text-lg sm:leading-9">
-            Especialistas en mármol, granito, porcelánico y cuarzo.
+            Especialistas en mármol y granito.
           </p>
 
           <div className="mt-10 sm:mt-14">

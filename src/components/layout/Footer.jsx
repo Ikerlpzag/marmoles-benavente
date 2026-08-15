@@ -22,11 +22,11 @@ export default function Footer() {
 
                 <p className="mt-6 text-base leading-8 text-[var(--text-light)]">
                   Encimeras, fachadas, escaleras, chimeneas, baños y proyectos
-                  personalizados en mármol, granito, cuarzo y piedra natural.
+                  personalizados en mármol y granito.
                 </p>
 
                 <p className="mt-8 text-sm text-[var(--text-light)]">
-                  Dalías · Almería
+                  C. la Covacha 2 · 04750 · Dalías · Almería
                 </p>
               </div>
 

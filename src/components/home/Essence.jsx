@@ -17,7 +17,7 @@ export default function Essence() {
             />
 
             <p className="mt-8 max-w-lg text-base leading-8 text-neutral-600 sm:text-lg sm:leading-9">
-              Transformamos mármol, granito, cuarzo y porcelánico en proyectos
+              Transformamos mármol y granito en proyectos
               únicos para viviendas, negocios y espacios funerarios. Cada pieza
               se fabrica a medida en nuestro taller.
             </p>

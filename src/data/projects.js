@@ -2,7 +2,7 @@ import kitchen from "../assets/images/kitchen.webp";
 import bathroom from "../assets/images/services/bathroom.webp";
 import stairs from "../assets/images/services/stairs.webp";
 import table from "../assets/images/table.webp";
-import memorial from "../assets/images/services/memorials.webp";
+import memorial from "../assets/images/memorial.webp";
 import fireplace from "../assets/images/fireplace.webp";
 
 export const projects = [

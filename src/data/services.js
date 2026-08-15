@@ -1,7 +1,7 @@
 import kitchens from "../assets/images/kitchen.webp";
 import bathrooms from "../assets/images/services/bathroom.webp";
 import stairs from "../assets/images/services/stairs.webp";
-import memorials from "../assets/images/services/memorials.webp";
+import memorials from "../assets/images/memorial.webp";
 import custom from "../assets/images/services/custom.webp";
 
 export const services = [

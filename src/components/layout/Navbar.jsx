@@ -9,7 +9,7 @@ import { navigation } from "../../data/navigation";
 import HamburgerButton from "./HamburgerButton";
 import MobileMenu from "./MobileMenu";
 
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo.webp";
 
 export default function Navbar() {
   const location = useLocation();

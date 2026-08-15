@@ -2,7 +2,7 @@ import Button from "../ui/Button";
 import SectionHeader from "../ui/SectionHeader";
 import Reveal from "../ui/Reveal";
 
-import workshop from "../../assets/images/about.png";
+import workshop from "../../assets/images/about.webp";
 import Section from "../ui/Section";
 
 export default function Essence() {

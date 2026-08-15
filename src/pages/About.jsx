@@ -4,7 +4,7 @@ import SectionHeader from "../components/ui/SectionHeader";
 import Reveal from "../components/ui/Reveal";
 import CTA from "../components/home/CTA";
 
-import workshop from "../assets/images/about.png";
+import workshop from "../assets/images/about.webp";
 import detail1 from "../assets/images/services.webp";
 import detail2 from "../assets/images/services.webp";
 

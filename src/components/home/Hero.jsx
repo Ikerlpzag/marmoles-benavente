@@ -1,4 +1,4 @@
-import hero from "../../assets/images/hero.jpg";
+import hero from "../../assets/images/hero.webp";
 
 import Container from "../ui/Container";
 import Button from "../ui/Button";

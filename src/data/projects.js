@@ -1,9 +1,9 @@
 import kitchen from "../assets/images/kitchen.webp";
 import bathroom from "../assets/images/services/bathroom.webp";
-import stairs from "../assets/images/projects.jpg";
-import facade from "../assets/images/projects.jpg";
-import memorial from "../assets/images/projects.jpg";
-import fireplace from "../assets/images/projects.jpg";
+import stairs from "../assets/images/projects.webp";
+import facade from "../assets/images/projects.webp";
+import memorial from "../assets/images/projects.webp";
+import fireplace from "../assets/images/projects.webp";
 
 export const projects = [
   {

@@ -1,4 +1,4 @@
-import kitchens from "../assets/images/projects.webp";
+import kitchens from "../assets/images/kitchen.webp";
 import bathrooms from "../assets/images/services/bathroom.webp";
 import stairs from "../assets/images/services/stairs.webp";
 import memorials from "../assets/images/services/memorials.webp";

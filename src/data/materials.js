@@ -1,19 +1,19 @@
-import macael from "../assets/images/materials/macael.jpg";
-import gris from "../assets/images/materials/gris.jpg";
+import macael from "../assets/images/materials/macael.webp";
+import gris from "../assets/images/materials/gris.webp";
 
-import vizag from "../assets/images/materials/vizag.jpg";
-import claro from "../assets/images/materials/claro.jpg";
-import oscuro from "../assets/images/materials/oscuro.jpg";
-import absoluto from "../assets/images/materials/absoluto.jpg";
-import castilla from "../assets/images/materials/castilla.jpg";
-import sudafrica from "../assets/images/materials/sudafrica.jpg";
-import noche from "../assets/images/materials/noche.jpg";
-import vaneela from "../assets/images/materials/vaneela.jpg";
-import ochavo from "../assets/images/materials/ochavo.jpg";
-import porriño from "../assets/images/materials/porriño.jpg";
-import himalaya from "../assets/images/materials/himalaya.jpg";
-import salone from "../assets/images/materials/salone.jpg";
-import oliva from "../assets/images/materials/oliva.jpg";
+import vizag from "../assets/images/materials/vizag.webp";
+import claro from "../assets/images/materials/claro.webp";
+import oscuro from "../assets/images/materials/oscuro.webp";
+import absoluto from "../assets/images/materials/absoluto.webp";
+import castilla from "../assets/images/materials/castilla.webp";
+import sudafrica from "../assets/images/materials/sudafrica.webp";
+import noche from "../assets/images/materials/noche.webp";
+import vaneela from "../assets/images/materials/vaneela.webp";
+import ochavo from "../assets/images/materials/ochavo.webp";
+import porriño from "../assets/images/materials/porriño.webp";
+import himalaya from "../assets/images/materials/himalaya.webp";
+import salone from "../assets/images/materials/salone.webp";
+import oliva from "../assets/images/materials/oliva.webp";
 
 export const materials = {
   marmoles: [

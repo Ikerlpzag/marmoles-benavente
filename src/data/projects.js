@@ -1,5 +1,5 @@
-import kitchen from "../assets/images/projects.jpg";
-import bathroom from "../assets/images/projects.jpg";
+import kitchen from "../assets/images/kitchen.webp";
+import bathroom from "../assets/images/services/bathroom.webp";
 import stairs from "../assets/images/projects.jpg";
 import facade from "../assets/images/projects.jpg";
 import memorial from "../assets/images/projects.jpg";

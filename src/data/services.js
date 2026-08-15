@@ -1,6 +1,6 @@
-import kitchens from "../assets/images/projects.jpg";
-import bathrooms from "../assets/images/services/bathrooms.jpg";
-import stairs from "../assets/images/services/stairs.jpg";
+import kitchens from "../assets/images/projects.webp";
+import bathrooms from "../assets/images/services/bathroom.webp";
+import stairs from "../assets/images/services/stairs.webp";
 import memorials from "../assets/images/services/memorials.webp";
 import custom from "../assets/images/services/custom.webp";
 

@@ -13,7 +13,7 @@ export default function About() {
     <>
       <PageHeader
         eyebrow="MÁRMOLES BENAVENTE"
-        title="Más de tres décadas trabajando la piedra con la misma precisión."
+        title="Más de cuatro décadas trabajando la piedra con la misma precisión."
       />
 
       {/* Introducción */}

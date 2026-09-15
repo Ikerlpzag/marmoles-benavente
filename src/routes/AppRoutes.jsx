@@ -8,6 +8,9 @@ import Materials from "../pages/Materials";
 import Services from "../pages/Services";
 import Projects from "../pages/Projects";
 import Contact from "../pages/Contact";
+import Legal from "../pages/Legal";
+import Privacy from "../pages/Privacy";
+import Cookies from "../pages/Cookies";
 
 export default function AppRoutes() {
   return (
@@ -20,6 +23,10 @@ export default function AppRoutes() {
           <Route path="/services" element={<Services />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+
+          <Route path="/aviso-legal" element={<Legal />} />
+          <Route path="/privacidad" element={<Privacy />} />
+          <Route path="/cookies" element={<Cookies />} />
         </Route>
       </Routes>
     </BrowserRouter>

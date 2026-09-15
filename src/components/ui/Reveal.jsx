@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+
 import { fadeUp } from "../../animations/variants";
 
 export default function Reveal({
@@ -6,11 +7,13 @@ export default function Reveal({
   className = "",
   variants = fadeUp,
 }) {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <motion.div
-      variants={variants}
-      initial="hidden"
-      whileInView="visible"
+      variants={shouldReduceMotion ? undefined : variants}
+      initial={shouldReduceMotion ? false : "hidden"}
+      whileInView={shouldReduceMotion ? undefined : "visible"}
       viewport={{ once: true, amount: 0.2 }}
       className={className}
     >

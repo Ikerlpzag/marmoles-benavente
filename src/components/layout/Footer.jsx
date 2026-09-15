@@ -1,6 +1,7 @@
 import Container from "../ui/Container";
 import Button from "../ui/Button";
 import Reveal from "../ui/Reveal";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -56,10 +57,43 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="mt-16 md:mt-24 flex flex-col gap-3 border-t border-[var(--border)] pt-8 text-sm text-[var(--text-light)] md:flex-row md:items-center md:justify-between">
-              <p>© 2026 Mármoles Benavente</p>
+            {/* Pie */}
 
-              <p>Todos los derechos reservados.</p>
+            <div className="mt-16 border-t border-[var(--border)] pt-8 md:mt-24">
+              <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                <p className="text-sm text-[var(--text-light)]">
+                  © 2026 Mármoles Benavente
+                </p>
+
+                <div className="flex flex-wrap gap-x-6 gap-y-3 text-xs text-[var(--text-light)]">
+                  <Link
+                    to="/aviso-legal"
+                    className="transition-opacity hover:opacity-60"
+                  >
+                    Aviso legal
+                  </Link>
+
+                  <Link
+                    to="/privacidad"
+                    className="transition-opacity hover:opacity-60"
+                  >
+                    Privacidad
+                  </Link>
+
+                  <Link
+                    to="/cookies"
+                    className="transition-opacity hover:opacity-60"
+                  >
+                    Cookies
+                  </Link>
+                </div>
+              </div>
+
+              <div className="mt-4">
+                <p className="text-xs text-[var(--text-light)]">
+                  Todos los derechos reservados.
+                </p>
+              </div>
             </div>
           </div>
         </Reveal>

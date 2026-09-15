@@ -3,6 +3,7 @@ import PageHeader from "../components/ui/PageHeader";
 import Section from "../components/ui/Section";
 import Reveal from "../components/ui/Reveal";
 import Seo from "../components/ui/Seo";
+import { Link } from "react-router-dom";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -143,6 +144,21 @@ export default function Contact() {
                   required
                   className="w-full resize-none border-b border-[var(--border)] bg-transparent py-4 outline-none transition-colors duration-300 focus:border-[var(--text)]"
                 />
+              </div>
+
+              <div className="mt-6">
+                <p className="text-xs leading-6 text-[var(--text-light)]">
+                  Responsable: Joaquín Benavente Reyes. Finalidad: atender y responder a
+                  tu consulta. Legitimación: gestión de tu solicitud y, cuando proceda,
+                  aplicación de medidas precontractuales.
+                  {" "}
+                  <Link
+                    to="/privacidad"
+                    className="underline underline-offset-4 transition-opacity hover:opacity-60"
+                  >
+                    Más información en la Política de privacidad.
+                  </Link>
+                </p>
               </div>
 
               <button

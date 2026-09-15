@@ -9,10 +9,12 @@ export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [mensajeEstado, setMensajeEstado] = useState("");
 
+  const [mapConsent, setMapConsent] = useState(() => {
+    return localStorage.getItem("google-maps-consent") === "accepted";
+  });
+
   const enviarFormulario = async (e) => {
     e.preventDefault();
-
-    console.log("Formulario enviado");
 
     setLoading(true);
     setMensajeEstado("");
@@ -48,6 +50,11 @@ export default function Contact() {
     }
   };
 
+  const aceptarMapa = () => {
+    localStorage.setItem("google-maps-consent", "accepted");
+    setMapConsent(true);
+  };
+
   return (
     <>
       <Seo
@@ -55,6 +62,7 @@ export default function Contact() {
         description="Contacta con Mármoles Benavente para consultar tu proyecto y solicitar información."
         path="/contact"
       />
+
       <PageHeader
         eyebrow="CONTACTO"
         title="Hablemos sobre tu proyecto."
@@ -63,7 +71,6 @@ export default function Contact() {
 
       <Section spacing="large">
         <div className="grid gap-16 md:gap-20 lg:grid-cols-2 lg:gap-24">
-
           <Reveal>
             <div>
               <p className="mb-10 text-xs uppercase tracking-[0.35em] text-[var(--text-light)]">
@@ -106,13 +113,16 @@ export default function Contact() {
 
           <Reveal delay={0.1}>
             <form onSubmit={enviarFormulario} className="space-y-8">
-
               <div>
-                <label className="mb-3 block text-sm uppercase tracking-[0.2em]">
+                <label
+                  htmlFor="nombre"
+                  className="mb-3 block text-sm uppercase tracking-[0.2em]"
+                >
                   Nombre
                 </label>
 
                 <input
+                  id="nombre"
                   type="text"
                   name="nombre"
                   required
@@ -121,11 +131,15 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="mb-3 block text-sm uppercase tracking-[0.2em]">
+                <label
+                  htmlFor="email"
+                  className="mb-3 block text-sm uppercase tracking-[0.2em]"
+                >
                   Correo electrónico
                 </label>
 
                 <input
+                  id="email"
                   type="email"
                   name="email"
                   required
@@ -134,11 +148,15 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="mb-3 block text-sm uppercase tracking-[0.2em]">
+                <label
+                  htmlFor="mensaje"
+                  className="mb-3 block text-sm uppercase tracking-[0.2em]"
+                >
                   Mensaje
                 </label>
 
                 <textarea
+                  id="mensaje"
                   name="mensaje"
                   rows={5}
                   required
@@ -148,10 +166,10 @@ export default function Contact() {
 
               <div className="mt-6">
                 <p className="text-xs leading-6 text-[var(--text-light)]">
-                  Responsable: Joaquín Benavente Reyes. Finalidad: atender y responder a
-                  tu consulta. Legitimación: gestión de tu solicitud y, cuando proceda,
-                  aplicación de medidas precontractuales.
-                  {" "}
+                  Responsable: Joaquín Benavente Reyes. Finalidad: atender y
+                  responder a tu consulta. Legitimación: gestión de tu
+                  solicitud y, cuando proceda, aplicación de medidas
+                  precontractuales.{" "}
                   <Link
                     to="/privacidad"
                     className="underline underline-offset-4 transition-opacity hover:opacity-60"
@@ -170,23 +188,57 @@ export default function Contact() {
               </button>
 
               {mensajeEstado && (
-                <p className="pt-4 text-sm">
-                  {mensajeEstado}
-                </p>
+                <p className="pt-4 text-sm">{mensajeEstado}</p>
               )}
             </form>
           </Reveal>
-
         </div>
       </Section>
 
       <section className="h-[400px] border-t border-[var(--border)] md:h-[500px] lg:h-[550px]">
-        <iframe
-          title="Mapa"
-          src="https://www.google.com/maps?q=marmolesbenavente,Dalías,Almería&output=embed"
-          className="h-full w-full border-0"
-          loading="lazy"
-        />
+        {mapConsent ? (
+          <iframe
+            title="Mapa de Mármoles Benavente"
+            src="https://www.google.com/maps?q=marmolesbenavente,Dalías,Almería&output=embed"
+            className="h-full w-full border-0"
+            loading="lazy"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center bg-[var(--surface)] px-6">
+            <div className="max-w-md text-center">
+              <p className="text-xs uppercase tracking-[0.3em] text-[var(--text-light)]">
+                UBICACIÓN
+              </p>
+
+              <h2 className="mt-5 text-2xl leading-tight sm:text-3xl">
+                Consulta nuestra ubicación en Google Maps.
+              </h2>
+
+              <p className="mt-5 text-sm leading-7 text-[var(--text-light)]">
+                El mapa utiliza servicios de Google que pueden instalar
+                cookies de terceros. Para visualizarlo debes aceptar su
+                carga.
+              </p>
+
+              <div className="mt-8 flex flex-col items-center gap-5 sm:flex-row sm:justify-center">
+                <button
+                  type="button"
+                  onClick={aceptarMapa}
+                  className="border-b border-current pb-1 text-sm font-medium uppercase tracking-[0.2em] transition-opacity hover:opacity-60"
+                >
+                  Aceptar y ver mapa
+                </button>
+
+                <Link
+                  to="/cookies"
+                  className="border-b border-transparent pb-1 text-sm uppercase tracking-[0.2em] text-[var(--text-light)] transition-colors hover:border-[var(--text)] hover:text-[var(--text)]"
+                >
+                  Política de cookies
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
       </section>
     </>
   );

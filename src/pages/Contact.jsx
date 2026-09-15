@@ -2,6 +2,7 @@ import { useState } from "react";
 import PageHeader from "../components/ui/PageHeader";
 import Section from "../components/ui/Section";
 import Reveal from "../components/ui/Reveal";
+import Seo from "../components/ui/Seo";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -48,6 +49,11 @@ export default function Contact() {
 
   return (
     <>
+      <Seo
+        title="Contacto | Mármoles Benavente"
+        description="Contacta con Mármoles Benavente para consultar tu proyecto y solicitar información."
+        path="/contact"
+      />
       <PageHeader
         eyebrow="CONTACTO"
         title="Hablemos sobre tu proyecto."

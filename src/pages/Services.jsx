@@ -3,12 +3,18 @@ import Section from "../components/ui/Section";
 import Reveal from "../components/ui/Reveal";
 import FeatureSection from "../components/home/FeatureSection";
 import CTA from "../components/home/CTA";
+import Seo from "../components/ui/Seo";
 
 import { services } from "../data/services";
 
 export default function Services() {
   return (
     <>
+      <Seo
+        title="Servicios | Mármoles Benavente"
+        description="Fabricamos e instalamos soluciones a medida en mármol y granito para cocinas, baños, fachadas, escaleras y otros proyectos."
+        path="/services"
+      />
       <PageHeader
         eyebrow="SERVICIOS"
         title="Servicios a medida para cada proyecto."

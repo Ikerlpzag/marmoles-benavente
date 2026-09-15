@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://marmolesbenavente.com/sitemap.xml

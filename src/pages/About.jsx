@@ -3,6 +3,7 @@ import Section from "../components/ui/Section";
 import SectionHeader from "../components/ui/SectionHeader";
 import Reveal from "../components/ui/Reveal";
 import CTA from "../components/home/CTA";
+import Seo from "../components/ui/Seo";
 
 import workshop from "../assets/images/about.webp";
 import detail1 from "../assets/images/work.webp";
@@ -11,6 +12,11 @@ import detail2 from "../assets/images/services.webp";
 export default function About() {
   return (
     <>
+    <Seo
+      title="Sobre nosotros | Mármoles Benavente"
+      description="Conoce Mármoles Benavente, nuestra experiencia y nuestra forma de trabajar el mármol y granito desde nuestro taller."
+      path="/about"
+    />
       <PageHeader
         eyebrow="MÁRMOLES BENAVENTE"
         title="Más de cuatro décadas trabajando la piedra con la misma precisión."

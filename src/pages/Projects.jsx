@@ -2,12 +2,19 @@ import PageHeader from "../components/ui/PageHeader";
 import Section from "../components/ui/Section";
 import Reveal from "../components/ui/Reveal";
 import CTA from "../components/home/CTA";
+import Seo from "../components/ui/Seo";
 
 import { projects } from "../data/projects";
 
 export default function Projects() {
   return (
     <>
+      <Seo
+        title="Proyectos | Mármoles Benavente"
+        description="Descubre una selección de proyectos realizados por Mármoles Benavente en mármol y granito para viviendas, negocios y espacios funerarios."
+        path="/projects"
+      />
+      
       <PageHeader
         eyebrow="PROYECTOS"
         title="Proyectos que reflejan nuestro trabajo."

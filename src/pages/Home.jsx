@@ -3,6 +3,7 @@ import Essence from "../components/home/Essence";
 import FeatureSection from "../components/home/FeatureSection";
 import FeaturedProjects from "../components/home/FeaturedProjects";
 import CTA from "../components/home/CTA";
+import Seo from "../components/ui/Seo";
 
 import materialsImage from "../assets/images/materials.webp";
 import servicesImage from "../assets/images/work.webp";
@@ -10,6 +11,11 @@ import servicesImage from "../assets/images/work.webp";
 export default function Home() {
   return (
     <>
+      <Seo
+        title="Mármoles Benavente | Mármol, granito y piedra a medida"
+        description="Mármoles Benavente trabaja mármol y granito para proyectos a medida desde su taller."
+        path="/"
+      />
       <Hero />
 
       <Essence />

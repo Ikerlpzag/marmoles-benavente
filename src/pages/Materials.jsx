@@ -4,12 +4,18 @@ import SectionHeader from "../components/ui/SectionHeader";
 import Reveal from "../components/ui/Reveal";
 import CTA from "../components/home/CTA";
 import MaterialsGrid from "../components/materials/MaterialsGrid";
+import Seo from "../components/ui/Seo";
 
 import { materials } from "../data/materials";
 
 export default function Materials() {
   return (
     <>
+      <Seo
+        title="Materiales | Mármoles Benavente"
+        description="Descubre nuestra selección de mármoles y granitos para crear soluciones a medida con calidad, resistencia y durabilidad."
+        path="/materials"
+      />
       <PageHeader
         eyebrow="MATERIALES"
         title="La base de un proyecto comienza con el material adecuado."

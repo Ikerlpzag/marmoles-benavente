@@ -62,28 +62,29 @@ export default function Navbar() {
             <NavLink
               to="/"
               onClick={() => {
-                if (location.pathname === "/") {
-                  scrollTop();
-                }
-
+                if (location.pathname === "/") scrollTop();
                 setMenuOpen(false);
               }}
-              className="flex items-center gap-3"
+              className="flex items-center gap-2 sm:gap-3"
             >
               <img
                 src={logo}
                 alt="Mármoles Benavente"
-                className="h-12 lg:h-14 w-auto"
+                className="h-10 sm:h-11 lg:h-14 w-auto"
               />
 
-              {/* Solo escritorio */}
-
               <div className="flex flex-col leading-none">
-                <span className="text-[8px] sm:text-[9px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.4em] text-[#0A3F7A]">
+                <span
+                  className="text-[8px] sm:text-[9px] lg:text-[10px] uppercase tracking-[0.35em]"
+                  style={{ color: "#0A3F7A" }}
+                >
                   MÁRMOLES
                 </span>
 
-                <span className="font-['Cormorant_Garamond'] text-[1.35rem] sm:text-[1.55rem] md:text-[2rem] font-semibold tracking-[0.05em] text-[#0A3F7A]">
+                <span
+                  className="font-['Cormorant_Garamond'] text-[1.15rem] sm:text-[1.35rem] lg:text-[2rem] font-semibold tracking-[0.05em]"
+                  style={{ color: "#0A3F7A" }}
+                >
                   BENAVENTE
                 </span>
               </div>
@@ -91,7 +92,7 @@ export default function Navbar() {
 
             {/* Escritorio */}
 
-            <nav className="hidden lg:flex items-center gap-10">
+            <nav className="hidden xl:flex items-center gap-8">
               {navigation.map((item) => (
                 <NavLink
                   key={item.href}
@@ -116,7 +117,7 @@ export default function Navbar() {
               ))}
             </nav>
 
-            <div className="hidden lg:block">
+            <div className="hidden xl:block">
               <Button to="/contact">
                 Contactar
               </Button>

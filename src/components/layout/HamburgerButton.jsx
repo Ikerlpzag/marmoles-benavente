@@ -4,7 +4,7 @@ export default function HamburgerButton({ open, onClick }) {
       onClick={onClick}
       aria-label={open ? "Cerrar menú" : "Abrir menú"}
       aria-expanded={open}
-      className="relative z-[60] flex h-12 w-12 items-center justify-center lg:hidden"
+      className="relative z-[60] flex h-12 w-12 items-center justify-center xl:hidden"
     >
       <span
         className={`absolute h-[2px] w-7 bg-[#0A3F7A] transition-all duration-300 ${
